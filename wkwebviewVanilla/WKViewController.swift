@@ -31,7 +31,7 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     func ydHandleError(error: Error) {
-        print("🕵🏼‍♂️ ydHandleError: \(error.localizedDescription)")
+        print("[*] ydHandleError: \(error.localizedDescription)")
 
     }
     
@@ -45,19 +45,22 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
             }
         }
 
-        print("🕵🏼‍♂️ WKNavigationResponse \(navigationResponse.response as? HTTPURLResponse)") // WKNavigationResponse always nil
+        print("[*] WKNavigationResponse \(navigationResponse.response as? HTTPURLResponse)") // WKNavigationResponse always nil
         
         decisionHandler(.allow)
         return
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print(webView.url)
+        
+        if let a = webView.url?.absoluteString {
+            print("[*] \(a)")
+        }
     }
     
     //MARK: WKUIDelegate
     func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
-        print("🕵🏼‍♂️ runJavaScriptAlertPanelWithMessage called")
+        print("[*] runJavaScriptAlertPanelWithMessage called")
         let alertController = UIAlertController(title: message, message: nil,
                                                 preferredStyle: UIAlertController.Style.alert);
         
@@ -77,11 +80,11 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
-            print("🕵🏼‍♂️ progress -> "  + String(webView.estimatedProgress))
+            print("[*] progress -> "  + String(webView.estimatedProgress))
         }
         if keyPath == "title" {
             if let title = webView.title {
-                print("🕵🏼‍♂️ title -> " + title)
+                print("[*] title -> " + title)
             }
         }
     }

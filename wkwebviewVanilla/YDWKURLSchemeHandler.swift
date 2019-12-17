@@ -3,24 +3,26 @@ import WebKit
 
 final class YDWKURLSchemeHandler: NSObject, WKURLSchemeHandler {
 
-    func webView(_ webView: WKWebView, stop urlSchemeTask: WKURLSchemeTask) {
-        print("🕵🏼‍♂️ in webView stop")
-    }
+    static let customScheme = "rm"
+    fileprivate let scheme = "https"
+    
+    func webView(_ webView: WKWebView, stop urlSchemeTask: WKURLSchemeTask) {}
 
     func webView(_ webView: WKWebView, start urlSchemeTask: WKURLSchemeTask) {
         do {
-
-            guard let url = webView.url else {
+            
+            guard let url = urlSchemeTask.request.url else {
                 return
             }
-            print("🕵🏼‍♂️ original URL \(url)")
-            var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-            components?.scheme = "https"
+            
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
+            components?.scheme = scheme
             
             guard let finalUrl = components?.url else {
                 return
             }
-            print("🕵🏼‍♂️ URL -> \(finalUrl.absoluteURL) + \tmime-type: \(finalUrl.getMimeType())")
+            print("[*]\tURL -> \(finalUrl.absoluteURL)")
+            
             let data = try Data(contentsOf: finalUrl)
             
             let response = URLResponse(url: finalUrl,
@@ -33,7 +35,6 @@ final class YDWKURLSchemeHandler: NSObject, WKURLSchemeHandler {
         }
             
         catch {
-            print("🕵🏼‍♂️ in catch")
             urlSchemeTask.didFailWithError(error)
         }
     }
