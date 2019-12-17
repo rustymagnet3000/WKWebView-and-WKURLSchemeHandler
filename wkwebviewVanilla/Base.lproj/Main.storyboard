@@ -17,7 +17,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WK Vanilla" id="6AK-2b-iXA"/>
+                    <tabBarItem key="tabBarItem" title="WK Vanilla" image="cloud" selectedImage="cloud" id="6AK-2b-iXA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bY2-hx-P9l"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="WK SchemeHandler" id="qEh-dS-a0k"/>
+                    <tabBarItem key="tabBarItem" title="WK SchemeHandler" image="rocket" selectedImage="rocket" id="qEh-dS-a0k"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LZF-yd-LFT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,7 +49,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NTU-37-Nsu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bubble" id="ojF-U9-jdz"/>
+                    <tabBarItem key="tabBarItem" title="Bubble" image="happy" selectedImage="happy" id="ojF-U9-jdz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meg-oB-TW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,4 +76,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloud" width="30" height="30"/>
+        <image name="happy" width="30" height="30"/>
+        <image name="rocket" width="30" height="30"/>
+    </resources>
 </document>

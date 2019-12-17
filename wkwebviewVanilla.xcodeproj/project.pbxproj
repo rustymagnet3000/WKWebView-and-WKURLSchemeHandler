@@ -17,6 +17,8 @@
 		0F3F638A233B676C003477BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6389233B676C003477BB /* Assets.xcassets */; };
 		0F3F638D233B676C003477BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F638B233B676C003477BB /* LaunchScreen.storyboard */; };
 		0F73C9772368531E00CD3105 /* WKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* WKViewController.swift */; };
+		0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */; };
+		0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0F3F6389233B676C003477BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3F638C233B676C003477BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F3F638E233B676C003477BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDStringConstants.swift; sourceTree = "<group>"; };
+		0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YDTimeHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +70,13 @@
 			children = (
 				0F3F6380233B676A003477BB /* AppDelegate.swift */,
 				0F3F6382233B676A003477BB /* SceneDelegate.swift */,
-				0F260044234225EF000C4AC4 /* BubbleClass.swift */,
-				0F26004623422666000C4AC4 /* BubbleVC.swift */,
 				0F3F6384233B676A003477BB /* WKViewController.swift */,
+				0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */,
 				0F2D250723A3D3CE000D9C46 /* WKSchemeVC.swift */,
 				0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */,
+				0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */,
+				0F260044234225EF000C4AC4 /* BubbleClass.swift */,
+				0F26004623422666000C4AC4 /* BubbleVC.swift */,
 				0F3F6386233B676A003477BB /* Main.storyboard */,
 				0F3F6389233B676C003477BB /* Assets.xcassets */,
 				0F3F638B233B676C003477BB /* LaunchScreen.storyboard */,
@@ -153,7 +159,9 @@
 				0F260045234225EF000C4AC4 /* BubbleClass.swift in Sources */,
 				0F73C9772368531E00CD3105 /* WKViewController.swift in Sources */,
 				0F1BCF7223A78FBB000DB536 /* YDWKURLSchemeHandler.swift in Sources */,
+				0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */,
 				0F3F6381233B676A003477BB /* AppDelegate.swift in Sources */,
+				0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */,
 				0F2D250823A3D3CE000D9C46 /* WKSchemeVC.swift in Sources */,
 				0F3F6383233B676A003477BB /* SceneDelegate.swift in Sources */,
 				0F26004723422666000C4AC4 /* BubbleVC.swift in Sources */,

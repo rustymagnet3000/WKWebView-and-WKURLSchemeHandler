@@ -5,15 +5,17 @@ import WebKit
 class WKschemeViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     var webView: WKWebView!
-    let resource: URL = URL(string: YDWKURLSchemeHandler.customScheme + "://www.httpbin.org/")!
+    let resource: URL = URL(string: Scheme.custom + Endpoint.hostname + Endpoint.path)!
     
     override func loadView() {
         let configuration = WKWebViewConfiguration()
-        configuration.websiteDataStore = WKWebsiteDataStore.nonPersistent()
-        configuration.dataDetectorTypes = [.all]
         let customSchemeHandler = YDWKURLSchemeHandler()
-        configuration.setURLSchemeHandler(customSchemeHandler, forURLScheme: YDWKURLSchemeHandler.customScheme)
 
+        configuration.websiteDataStore = WKWebsiteDataStore.nonPersistent()
+        configuration.dataDetectorTypes = [.all]        
+        configuration.setURLSchemeHandler(customSchemeHandler, forURLScheme: Scheme.custom)
+
+        
         webView = WKWebView(frame: .zero, configuration: configuration)
         view = webView
         webView.uiDelegate = self

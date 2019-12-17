@@ -3,9 +3,7 @@ import WebKit
 
 final class YDWKURLSchemeHandler: NSObject, WKURLSchemeHandler {
 
-    static let customScheme = "rm"
-    fileprivate let scheme = "https"
-    
+   
     func webView(_ webView: WKWebView, stop urlSchemeTask: WKURLSchemeTask) {}
 
     func webView(_ webView: WKWebView, start urlSchemeTask: WKURLSchemeTask) {
@@ -16,12 +14,12 @@ final class YDWKURLSchemeHandler: NSObject, WKURLSchemeHandler {
             }
             
             var components = URLComponents(url: url, resolvingAgainstBaseURL: true)
-            components?.scheme = scheme
+            components?.scheme = Scheme.normal
             
             guard let finalUrl = components?.url else {
                 return
             }
-            print("[*]\tURL -> \(finalUrl.absoluteURL)")
+            print(YDTimeHelper.ReadableTime() + "\t-> \(finalUrl.absoluteURL)")
             
             let data = try Data(contentsOf: finalUrl)
             

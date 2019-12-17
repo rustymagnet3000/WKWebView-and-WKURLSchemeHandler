@@ -4,7 +4,7 @@ import WebKit
 class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
     var webView: WKWebView!
-    let resource: URL = URL(string: "https://www.httpbin.org/")!
+    let resource: URL = URL(string: Scheme.normal + Endpoint.hostname + Endpoint.path)!
     
     override func loadView() {
         let configuration = WKWebViewConfiguration()
@@ -13,7 +13,7 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         configuration.dataDetectorTypes = [.all]
             
         webView = WKWebView(frame: .zero, configuration: configuration)
-        webView.customUserAgent = "YDWKDemoUserAgent"
+        webView.customUserAgent = "Vanilla WKWebKit UserAgent"
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.title), options: .new, context: nil)
         view = webView
@@ -52,7 +52,6 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
         if let a = webView.url?.absoluteString {
             print("[*] \(a)")
         }
