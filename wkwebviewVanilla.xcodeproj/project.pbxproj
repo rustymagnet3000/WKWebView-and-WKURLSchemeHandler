@@ -10,26 +10,49 @@
 		0F1BCF7223A78FBB000DB536 /* YDWKURLSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */; };
 		0F260045234225EF000C4AC4 /* BubbleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F260044234225EF000C4AC4 /* BubbleClass.swift */; };
 		0F26004723422666000C4AC4 /* BubbleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F26004623422666000C4AC4 /* BubbleVC.swift */; };
-		0F2D250823A3D3CE000D9C46 /* WKSchemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D250723A3D3CE000D9C46 /* WKSchemeVC.swift */; };
+		0F2D250823A3D3CE000D9C46 /* YDWKSchemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D250723A3D3CE000D9C46 /* YDWKSchemeVC.swift */; };
+		0F37A03623AA295000BF09CC /* wkwebviewVanillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F37A03523AA295000BF09CC /* wkwebviewVanillaTests.swift */; };
+		0F37A03D23AA29EB00BF09CC /* YDWKURLSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */; };
+		0F37A03E23AA29EE00BF09CC /* YDWKSchemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D250723A3D3CE000D9C46 /* YDWKSchemeVC.swift */; };
+		0F37A03F23AA29F100BF09CC /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
+		0F37A04023AA29F400BF09CC /* YDStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */; };
+		0F37A04123AA29F700BF09CC /* YDTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */; };
+		0F37A04223AA2C8A00BF09CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6380233B676A003477BB /* AppDelegate.swift */; };
+		0F37A04323AA2C8D00BF09CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6382233B676A003477BB /* SceneDelegate.swift */; };
+		0F37A04423AA2C9900BF09CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6386233B676A003477BB /* Main.storyboard */; };
+		0F37A04523AA2F5E00BF09CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6389233B676C003477BB /* Assets.xcassets */; };
 		0F3F6381233B676A003477BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6380233B676A003477BB /* AppDelegate.swift */; };
 		0F3F6383233B676A003477BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6382233B676A003477BB /* SceneDelegate.swift */; };
 		0F3F6388233B676A003477BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6386233B676A003477BB /* Main.storyboard */; };
 		0F3F638A233B676C003477BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6389233B676C003477BB /* Assets.xcassets */; };
 		0F3F638D233B676C003477BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F638B233B676C003477BB /* LaunchScreen.storyboard */; };
-		0F73C9772368531E00CD3105 /* WKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* WKViewController.swift */; };
+		0F73C9772368531E00CD3105 /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
 		0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */; };
 		0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F37A03823AA295000BF09CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F3F6375233B676A003477BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F3F637C233B676A003477BB;
+			remoteInfo = wkwebviewVanilla;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDWKURLSchemeHandler.swift; sourceTree = "<group>"; };
 		0F260044234225EF000C4AC4 /* BubbleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleClass.swift; sourceTree = "<group>"; };
 		0F26004623422666000C4AC4 /* BubbleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleVC.swift; sourceTree = "<group>"; };
-		0F2D250723A3D3CE000D9C46 /* WKSchemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKSchemeVC.swift; sourceTree = "<group>"; };
+		0F2D250723A3D3CE000D9C46 /* YDWKSchemeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDWKSchemeVC.swift; sourceTree = "<group>"; };
+		0F37A03323AA295000BF09CC /* wkwebviewVanillaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wkwebviewVanillaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F37A03523AA295000BF09CC /* wkwebviewVanillaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wkwebviewVanillaTests.swift; sourceTree = "<group>"; };
+		0F37A03723AA295000BF09CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F3F637D233B676A003477BB /* wkwebviewVanilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wkwebviewVanilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3F6380233B676A003477BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F3F6382233B676A003477BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F3F6384233B676A003477BB /* WKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKViewController.swift; sourceTree = "<group>"; };
+		0F3F6384233B676A003477BB /* YDWKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDWKViewController.swift; sourceTree = "<group>"; };
 		0F3F6387233B676A003477BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F3F6389233B676C003477BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3F638C233B676C003477BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +62,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0F37A03023AA295000BF09CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F3F637A233B676A003477BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +79,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F37A03423AA295000BF09CC /* wkwebviewVanillaTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F37A03523AA295000BF09CC /* wkwebviewVanillaTests.swift */,
+				0F37A03723AA295000BF09CC /* Info.plist */,
+			);
+			path = wkwebviewVanillaTests;
+			sourceTree = "<group>";
+		};
 		0F3F6374233B676A003477BB = {
 			isa = PBXGroup;
 			children = (
 				0F3F637F233B676A003477BB /* wkwebviewVanilla */,
+				0F37A03423AA295000BF09CC /* wkwebviewVanillaTests */,
 				0F3F637E233B676A003477BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				0F3F637D233B676A003477BB /* wkwebviewVanilla.app */,
+				0F37A03323AA295000BF09CC /* wkwebviewVanillaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,10 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				0F3F6380233B676A003477BB /* AppDelegate.swift */,
-				0F3F6382233B676A003477BB /* SceneDelegate.swift */,
-				0F3F6384233B676A003477BB /* WKViewController.swift */,
 				0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */,
-				0F2D250723A3D3CE000D9C46 /* WKSchemeVC.swift */,
+				0F3F6382233B676A003477BB /* SceneDelegate.swift */,
+				0F3F6384233B676A003477BB /* YDWKViewController.swift */,
+				0F2D250723A3D3CE000D9C46 /* YDWKSchemeVC.swift */,
 				0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */,
 				0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */,
 				0F260044234225EF000C4AC4 /* BubbleClass.swift */,
@@ -88,6 +129,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0F37A03223AA295000BF09CC /* wkwebviewVanillaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F37A03A23AA295000BF09CC /* Build configuration list for PBXNativeTarget "wkwebviewVanillaTests" */;
+			buildPhases = (
+				0F37A02F23AA295000BF09CC /* Sources */,
+				0F37A03023AA295000BF09CC /* Frameworks */,
+				0F37A03123AA295000BF09CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F37A03923AA295000BF09CC /* PBXTargetDependency */,
+			);
+			name = wkwebviewVanillaTests;
+			productName = wkwebviewVanillaTests;
+			productReference = 0F37A03323AA295000BF09CC /* wkwebviewVanillaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0F3F637C233B676A003477BB /* wkwebviewVanilla */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F3F6391233B676C003477BB /* Build configuration list for PBXNativeTarget "wkwebviewVanilla" */;
@@ -111,10 +170,14 @@
 		0F3F6375233B676A003477BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = rusty_house;
 				TargetAttributes = {
+					0F37A03223AA295000BF09CC = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 0F3F637C233B676A003477BB;
+					};
 					0F3F637C233B676A003477BB = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -134,11 +197,21 @@
 			projectRoot = "";
 			targets = (
 				0F3F637C233B676A003477BB /* wkwebviewVanilla */,
+				0F37A03223AA295000BF09CC /* wkwebviewVanillaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0F37A03123AA295000BF09CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F37A04523AA2F5E00BF09CC /* Assets.xcassets in Resources */,
+				0F37A04423AA2C9900BF09CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F3F637B233B676A003477BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,23 +225,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F37A02F23AA295000BF09CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F37A03E23AA29EE00BF09CC /* YDWKSchemeVC.swift in Sources */,
+				0F37A03F23AA29F100BF09CC /* YDWKViewController.swift in Sources */,
+				0F37A04023AA29F400BF09CC /* YDStringConstants.swift in Sources */,
+				0F37A03D23AA29EB00BF09CC /* YDWKURLSchemeHandler.swift in Sources */,
+				0F37A04223AA2C8A00BF09CC /* AppDelegate.swift in Sources */,
+				0F37A03623AA295000BF09CC /* wkwebviewVanillaTests.swift in Sources */,
+				0F37A04123AA29F700BF09CC /* YDTimeHelper.swift in Sources */,
+				0F37A04323AA2C8D00BF09CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F3F6379233B676A003477BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0F260045234225EF000C4AC4 /* BubbleClass.swift in Sources */,
-				0F73C9772368531E00CD3105 /* WKViewController.swift in Sources */,
+				0F73C9772368531E00CD3105 /* YDWKViewController.swift in Sources */,
 				0F1BCF7223A78FBB000DB536 /* YDWKURLSchemeHandler.swift in Sources */,
 				0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */,
 				0F3F6381233B676A003477BB /* AppDelegate.swift in Sources */,
 				0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */,
-				0F2D250823A3D3CE000D9C46 /* WKSchemeVC.swift in Sources */,
+				0F2D250823A3D3CE000D9C46 /* YDWKSchemeVC.swift in Sources */,
 				0F3F6383233B676A003477BB /* SceneDelegate.swift in Sources */,
 				0F26004723422666000C4AC4 /* BubbleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F37A03923AA295000BF09CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F3F637C233B676A003477BB /* wkwebviewVanilla */;
+			targetProxy = 0F37A03823AA295000BF09CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0F3F6386233B676A003477BB /* Main.storyboard */ = {
@@ -190,6 +286,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0F37A03B23AA295000BF09CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U8MSEX235L;
+				INFOPLIST_FILE = wkwebviewVanillaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youdog.com.rusty.wkwebviewVanillaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wkwebviewVanilla.app/wkwebviewVanilla";
+			};
+			name = Debug;
+		};
+		0F37A03C23AA295000BF09CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U8MSEX235L;
+				INFOPLIST_FILE = wkwebviewVanillaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = youdog.com.rusty.wkwebviewVanillaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wkwebviewVanilla.app/wkwebviewVanilla";
+			};
+			name = Release;
+		};
 		0F3F638F233B676C003477BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +481,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F37A03A23AA295000BF09CC /* Build configuration list for PBXNativeTarget "wkwebviewVanillaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F37A03B23AA295000BF09CC /* Debug */,
+				0F37A03C23AA295000BF09CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0F3F6378233B676A003477BB /* Build configuration list for PBXProject "wkwebviewVanilla" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

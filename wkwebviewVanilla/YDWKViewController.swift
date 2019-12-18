@@ -72,9 +72,15 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
     
     override func viewDidLoad() {
+        print("[*]\tviewDidLoad...")
         super.viewDidLoad()
         let myRequest = URLRequest(url: resource)
         self.webView.load(myRequest)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("[*]\tviewDidAppear...")
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
