@@ -69,7 +69,6 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         
         self.present(alertController, animated: true, completion: {});
     }
-
     
     override func viewDidLoad() {
         print("[*]\tviewDidLoad...")

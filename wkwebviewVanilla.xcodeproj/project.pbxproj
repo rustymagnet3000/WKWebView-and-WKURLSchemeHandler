@@ -14,7 +14,6 @@
 		0F37A03623AA295000BF09CC /* wkwebviewVanillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F37A03523AA295000BF09CC /* wkwebviewVanillaTests.swift */; };
 		0F37A03D23AA29EB00BF09CC /* YDWKURLSchemeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */; };
 		0F37A03E23AA29EE00BF09CC /* YDWKSchemeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D250723A3D3CE000D9C46 /* YDWKSchemeVC.swift */; };
-		0F37A03F23AA29F100BF09CC /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
 		0F37A04023AA29F400BF09CC /* YDStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */; };
 		0F37A04123AA29F700BF09CC /* YDTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */; };
 		0F37A04223AA2C8A00BF09CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6380233B676A003477BB /* AppDelegate.swift */; };
@@ -26,9 +25,10 @@
 		0F3F6388233B676A003477BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6386233B676A003477BB /* Main.storyboard */; };
 		0F3F638A233B676C003477BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F6389233B676C003477BB /* Assets.xcassets */; };
 		0F3F638D233B676C003477BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F638B233B676C003477BB /* LaunchScreen.storyboard */; };
-		0F73C9772368531E00CD3105 /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
 		0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */; };
 		0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */; };
+		0FE9698823AA89B5002A2860 /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
+		0FE9698923AA89D2002A2860 /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F37A03E23AA29EE00BF09CC /* YDWKSchemeVC.swift in Sources */,
-				0F37A03F23AA29F100BF09CC /* YDWKViewController.swift in Sources */,
+				0FE9698923AA89D2002A2860 /* YDWKViewController.swift in Sources */,
 				0F37A04023AA29F400BF09CC /* YDStringConstants.swift in Sources */,
 				0F37A03D23AA29EB00BF09CC /* YDWKURLSchemeHandler.swift in Sources */,
 				0F37A04223AA2C8A00BF09CC /* AppDelegate.swift in Sources */,
@@ -245,11 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F260045234225EF000C4AC4 /* BubbleClass.swift in Sources */,
-				0F73C9772368531E00CD3105 /* YDWKViewController.swift in Sources */,
 				0F1BCF7223A78FBB000DB536 /* YDWKURLSchemeHandler.swift in Sources */,
 				0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */,
 				0F3F6381233B676A003477BB /* AppDelegate.swift in Sources */,
 				0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */,
+				0FE9698823AA89B5002A2860 /* YDWKViewController.swift in Sources */,
 				0F2D250823A3D3CE000D9C46 /* YDWKSchemeVC.swift in Sources */,
 				0F3F6383233B676A003477BB /* SceneDelegate.swift in Sources */,
 				0F26004723422666000C4AC4 /* BubbleVC.swift in Sources */,

@@ -1,5 +1,9 @@
 import XCTest
 import WebKit
+@testable import wkwebviewVanilla
+
+// weird trick: https://www.natashatherobot.com/ios-testing-view-controllers-swift/
+// https://www.vadimbulavin.com/unit-testing-async-code-in-swift/
 
 class wkwebviewVanillaTests: XCTestCase {
     
@@ -9,40 +13,43 @@ class wkwebviewVanillaTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        print("[*]\tUnit Test time...")
+        print("[*]\tUnit Test setup...")
         let bundle = Bundle(for: self.classForCoder)
         storyboard = UIStoryboard(name: "Main", bundle: bundle)
     }
+
+//--------------------------------------------------------------------------------------------
+
+    func checkWebview(exp: XCTestExpectation) {
+        
+        guard wkSchemeVC.webView.isLoading == true else {
+            exp.fulfill()
+            return
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10, execute: {
+            self.checkWebview(exp: exp)
+            })
+    }
     
-        //--------------------------------------------------------------------------------------------
-        // MARK: - wkSchemeVC Tests
-        // creates a loop of wkSchemeVC instances on the Heap
     
     func testWKSchemeVCLifeCycle() {
-
-        let expectation = XCTestExpectation(description: "testWKSchemeVCLifeCycle")
-        expectation.expectedFulfillmentCount = 1
+        let didFinish = self.expectation(description: "WK")
+        didFinish.expectedFulfillmentCount = 1
         
-        for _ in 1...3 {
-            self.wkSchemeVC = self.storyboard.instantiateViewController(withIdentifier: "YDWKschemeSB") as! YDWKschemeVC
-            print(self.wkSchemeVC.self!)
-            
-            print(self.wkSchemeVC.webView as Any)
-            
+        wkSchemeVC = storyboard.instantiateViewController(withIdentifier: "YDWKschemeSB") as? YDWKschemeVC
+        guard let vc = wkSchemeVC else{
+            fatalError("can't unwrap \(String(describing: wkSchemeVC))")
         }
-        expectation.fulfill()
-
-
-        wait(for: [expectation], timeout: 5)
-        
-        
-    }
-
-    func testPerformanceExample() {
-        measure {
-            // wkVanillaVC = storyboard.instantiateViewController(withIdentifier: "YDWKvanillaSB") as! WKViewController
-
+  
+        if let rootvc = UIApplication.shared.keyWindow!.rootViewController {
+            print("[*]\tFound a view Controller...\(rootvc.self)")
         }
+        
+        let _ = vc.view
+        checkWebview(exp: didFinish)
+    
+        print("[*] Wait about to invoke")
+        wait(for: [didFinish], timeout: 5)
     }
-
 }

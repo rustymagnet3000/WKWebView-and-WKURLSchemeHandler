@@ -6,6 +6,6 @@ enum Scheme {
 }
 
 enum Endpoint {
-    static let hostname = "://www.httpbin.org"  
+    static let hostname = "://9006113.local"  // "://www.httpbin.org"
     static let path = "/"
 }
