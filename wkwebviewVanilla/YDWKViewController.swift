@@ -5,6 +5,7 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
     var webView: WKWebView!
     let resource: URL = URL(string: Scheme.normal + Endpoint.hostname + Endpoint.path)!
+    let wkPathsToObserve = ["loading", "estimatedProgress", "title"]
     
     override func loadView() {
         let configuration = WKWebViewConfiguration()
@@ -14,8 +15,10 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
             
         webView = WKWebView(frame: .zero, configuration: configuration)
         webView.customUserAgent = "Vanilla WKWebKit UserAgent"
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.title), options: .new, context: nil)
+        
+        for keyPath in wkPathsToObserve {
+            webView.addObserver(self, forKeyPath: keyPath, options: .new, context: nil)
+        }
         view = webView
         webView.uiDelegate = self
         webView.navigationDelegate = self
@@ -39,13 +42,13 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
         
         if let response = navigationResponse.response as? HTTPURLResponse {
-            print("response \(response.statusCode) ")
+            print("[*] response \(response.statusCode) ")
             if response.statusCode == 401 {
                 // handle Unauthorized request
             }
         }
 
-        print("[*] WKNavigationResponse \(navigationResponse.response as? HTTPURLResponse)") // WKNavigationResponse always nil
+       // print("[*] WKNavigationResponse \(navigationResponse.response as? HTTPURLResponse)") // WKNavigationResponse always nil
         
         decisionHandler(.allow)
         return
@@ -83,6 +86,11 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+        if keyPath == "loading" {
+            print("[*] isLoading -> "  + String(webView.isLoading))
+        }
+        
         if keyPath == "estimatedProgress" {
             print("[*] progress -> "  + String(webView.estimatedProgress))
         }

@@ -32,7 +32,6 @@ class wkwebviewVanillaTests: XCTestCase {
             })
     }
     
-    
     func testWKSchemeVCLifeCycle() {
         let didFinish = self.expectation(description: "WK")
         didFinish.expectedFulfillmentCount = 1
@@ -41,15 +40,40 @@ class wkwebviewVanillaTests: XCTestCase {
         guard let vc = wkSchemeVC else{
             fatalError("can't unwrap \(String(describing: wkSchemeVC))")
         }
-  
-        if let rootvc = UIApplication.shared.keyWindow!.rootViewController {
-            print("[*]\tFound a view Controller...\(rootvc.self)")
+         
+        let _ = vc.view
+        checkWebview(exp: didFinish)
+        
+        print("[*] Wait about to invoke")
+        wait(for: [didFinish], timeout: 5)
+    }
+
+//--------------------------------------------------------------------------------------------
+
+    func testVanillaWK() {
+       
+        wkVanillaVC = storyboard.instantiateViewController(withIdentifier: "YDWKvanillaSB") as? WKViewController
+        
+        guard let vc = wkVanillaVC else{
+            fatalError("can't unwrap \(String(describing: wkVanillaVC))")
         }
         
         let _ = vc.view
-        checkWebview(exp: didFinish)
-    
+        
+        guard let wk = vc.webView else{
+            fatalError("can't unwrap webview")
+        }
+        
+        keyValueObservingExpectation(for: wk, keyPath: "estimatedProgress", handler: { (observedObject, change) in
+            
+            guard let observedObject = observedObject as? Bool else {
+                return false
+            }
+            print(observedObject)
+            return observedObject
+        })
+
         print("[*] Wait about to invoke")
-        wait(for: [didFinish], timeout: 5)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }
