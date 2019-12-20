@@ -13,7 +13,7 @@ final class YDWKschemeVC: YDWKVanillaVC {
         configuration.websiteDataStore = WKWebsiteDataStore.nonPersistent()
         configuration.dataDetectorTypes = [.all]
         configuration.setURLSchemeHandler(customSchemeHandler, forURLScheme: Scheme.custom)
-
+              
         webView = WKWebView(frame: .zero, configuration: configuration)
         webView.customUserAgent = "Custom Scheme WKWebKit UserAgent"
         view = webView

@@ -45,18 +45,18 @@ class wkwebviewVanillaTests: XCTestCase {
         })
 
         print("[*] Wait about to invoke")
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
     }
 //--------------------------------------------------------------------------------------------
 //MARK: testFunctions
     func testVanillaWK() {
-        for _ in 1...30 {
+        for _ in 1...10 {
             genericExpectation(sbName: "YDWKvanillaSB")
         }
     }
     
     func testURLSchemeWK() {
-        for _ in 1...30 {
+        for _ in 1...10 {
             genericExpectation(sbName: "YDWKschemeSB")
         }
     }

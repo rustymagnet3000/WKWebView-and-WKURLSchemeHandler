@@ -12,7 +12,7 @@ class YDWKVanillaVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
         let dataStore = WKWebsiteDataStore.nonPersistent()
         configuration.websiteDataStore = dataStore
         configuration.dataDetectorTypes = [.all]
-            
+               
         webView = WKWebView(frame: .zero, configuration: configuration)
         webView.customUserAgent = "Vanilla WKWebKit UserAgent"
         
