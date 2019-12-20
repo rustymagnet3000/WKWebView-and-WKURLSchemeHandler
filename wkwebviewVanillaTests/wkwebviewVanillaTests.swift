@@ -64,13 +64,16 @@ class wkwebviewVanillaTests: XCTestCase {
             fatalError("can't unwrap webview")
         }
         
-        keyValueObservingExpectation(for: wk, keyPath: "estimatedProgress", handler: { (observedObject, change) in
-            
-            guard let observedObject = observedObject as? Bool else {
-                return false
+        keyValueObservingExpectation(for: wk, keyPath: "loading", handler: { (observedObject, change) in
+
+            if let old = change["old"] as? Bool, let new = change["new"] as? Bool {
+                print("[*] isLoading\n\t\tOld:\t\(String(old))\n\t\tNew:\t\(String(new))")
+                if new == false {
+                    return true
+                }
             }
-            print(observedObject)
-            return observedObject
+            
+            return false
         })
 
         print("[*] Wait about to invoke")
