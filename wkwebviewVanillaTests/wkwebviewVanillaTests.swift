@@ -2,15 +2,15 @@ import XCTest
 import WebKit
 @testable import wkwebviewVanilla
 
-// weird trick: https://www.natashatherobot.com/ios-testing-view-controllers-swift/
-// https://www.vadimbulavin.com/unit-testing-async-code-in-swift/
-
 class wkwebviewVanillaTests: XCTestCase {
-    
+//--------------------------------------------------------------------------------------------
+//MARK: Properties
     var wkSchemeVC: YDWKschemeVC!
-    var wkVanillaVC: WKViewController!
+    var wkVanillaVC: YDWKVanillaVC!
     var storyboard: UIStoryboard!
-    
+
+//--------------------------------------------------------------------------------------------
+//MARK: Boiler Plate code
     override func setUp() {
         super.setUp()
         print("[*]\tUnit Test setup...")
@@ -19,46 +19,15 @@ class wkwebviewVanillaTests: XCTestCase {
     }
 
 //--------------------------------------------------------------------------------------------
-
-    func checkWebview(exp: XCTestExpectation) {
-        
-        guard wkSchemeVC.webView.isLoading == true else {
-            exp.fulfill()
-            return
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10, execute: {
-            self.checkWebview(exp: exp)
-            })
-    }
+//MARK: genericExpecation
     
-    func testWKSchemeVCLifeCycle() {
-        let didFinish = self.expectation(description: "WK")
-        didFinish.expectedFulfillmentCount = 1
-        
-        wkSchemeVC = storyboard.instantiateViewController(withIdentifier: "YDWKschemeSB") as? YDWKschemeVC
-        guard let vc = wkSchemeVC else{
-            fatalError("can't unwrap \(String(describing: wkSchemeVC))")
-        }
-         
-        let _ = vc.view
-        checkWebview(exp: didFinish)
-        
-        print("[*] Wait about to invoke")
-        wait(for: [didFinish], timeout: 5)
-    }
-
-//--------------------------------------------------------------------------------------------
-
-    func testVanillaWK() {
-       
-        wkVanillaVC = storyboard.instantiateViewController(withIdentifier: "YDWKvanillaSB") as? WKViewController
-        
-        guard let vc = wkVanillaVC else{
-            fatalError("can't unwrap \(String(describing: wkVanillaVC))")
+    func genericExpectation(sbName:String) {
+        let raw_vc = storyboard.instantiateViewController(withIdentifier: sbName) as? YDWKVanillaVC
+        guard let vc = raw_vc else{
+            fatalError("can't unwrap \(String(describing: raw_vc))")
         }
         
-        let _ = vc.view
+        let _ = vc.view     // <-- required to lifecycle the UIViewController
         
         guard let wk = vc.webView else{
             fatalError("can't unwrap webview")
@@ -72,11 +41,23 @@ class wkwebviewVanillaTests: XCTestCase {
                     return true
                 }
             }
-            
             return false
         })
 
         print("[*] Wait about to invoke")
         waitForExpectations(timeout: 5, handler: nil)
+    }
+//--------------------------------------------------------------------------------------------
+//MARK: testFunctions
+    func testVanillaWK() {
+        for _ in 1...30 {
+            genericExpectation(sbName: "YDWKvanillaSB")
+        }
+    }
+    
+    func testURLSchemeWK() {
+        for _ in 1...30 {
+            genericExpectation(sbName: "YDWKschemeSB")
+        }
     }
 }

@@ -27,8 +27,8 @@
 		0F3F638D233B676C003477BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3F638B233B676C003477BB /* LaunchScreen.storyboard */; };
 		0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */; };
 		0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */; };
-		0FE9698823AA89B5002A2860 /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
-		0FE9698923AA89D2002A2860 /* YDWKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKViewController.swift */; };
+		0FE9698823AA89B5002A2860 /* YDWKVanillaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKVanillaVC.swift */; };
+		0FE9698923AA89D2002A2860 /* YDWKVanillaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3F6384233B676A003477BB /* YDWKVanillaVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		0F3F637D233B676A003477BB /* wkwebviewVanilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wkwebviewVanilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3F6380233B676A003477BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F3F6382233B676A003477BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F3F6384233B676A003477BB /* YDWKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDWKViewController.swift; sourceTree = "<group>"; };
+		0F3F6384233B676A003477BB /* YDWKVanillaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDWKVanillaVC.swift; sourceTree = "<group>"; };
 		0F3F6387233B676A003477BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F3F6389233B676C003477BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3F638C233B676C003477BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				0F3F6380233B676A003477BB /* AppDelegate.swift */,
 				0FD45CF923A9204F00CFB2C1 /* YDStringConstants.swift */,
 				0F3F6382233B676A003477BB /* SceneDelegate.swift */,
-				0F3F6384233B676A003477BB /* YDWKViewController.swift */,
+				0F3F6384233B676A003477BB /* YDWKVanillaVC.swift */,
 				0F2D250723A3D3CE000D9C46 /* YDWKSchemeVC.swift */,
 				0F1BCF7123A78FBB000DB536 /* YDWKURLSchemeHandler.swift */,
 				0FD45CFB23A92F9300CFB2C1 /* YDTimeHelper.swift */,
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F37A03E23AA29EE00BF09CC /* YDWKSchemeVC.swift in Sources */,
-				0FE9698923AA89D2002A2860 /* YDWKViewController.swift in Sources */,
+				0FE9698923AA89D2002A2860 /* YDWKVanillaVC.swift in Sources */,
 				0F37A04023AA29F400BF09CC /* YDStringConstants.swift in Sources */,
 				0F37A03D23AA29EB00BF09CC /* YDWKURLSchemeHandler.swift in Sources */,
 				0F37A04223AA2C8A00BF09CC /* AppDelegate.swift in Sources */,
@@ -249,7 +249,7 @@
 				0FD45CFA23A9204F00CFB2C1 /* YDStringConstants.swift in Sources */,
 				0F3F6381233B676A003477BB /* AppDelegate.swift in Sources */,
 				0FD45CFC23A92F9300CFB2C1 /* YDTimeHelper.swift in Sources */,
-				0FE9698823AA89B5002A2860 /* YDWKViewController.swift in Sources */,
+				0FE9698823AA89B5002A2860 /* YDWKVanillaVC.swift in Sources */,
 				0F2D250823A3D3CE000D9C46 /* YDWKSchemeVC.swift in Sources */,
 				0F3F6383233B676A003477BB /* SceneDelegate.swift in Sources */,
 				0F26004723422666000C4AC4 /* BubbleVC.swift in Sources */,

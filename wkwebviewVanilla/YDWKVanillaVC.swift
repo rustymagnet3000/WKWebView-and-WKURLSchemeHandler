@@ -1,10 +1,10 @@
 import UIKit
 import WebKit
 
-class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+class YDWKVanillaVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
     var webView: WKWebView!
-    let resource: URL = URL(string: Scheme.normal + Endpoint.hostname + Endpoint.path)!
+    var resource: URL = URL(string: Scheme.normal + Endpoint.hostname + Endpoint.path)!
     let wkPathsToObserve = ["loading", "estimatedProgress", "title"]
     
     override func loadView() {
@@ -40,16 +40,6 @@ class WKViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
 
-        
-        if let response = navigationResponse.response as? HTTPURLResponse {
-            print("[*] response \(response.statusCode) ")
-            if response.statusCode == 401 {
-                // handle Unauthorized request
-            }
-        }
-
-       // print("[*] WKNavigationResponse \(navigationResponse.response as? HTTPURLResponse)") // WKNavigationResponse always nil
-        
         decisionHandler(.allow)
         return
     }

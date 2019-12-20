@@ -21,3 +21,11 @@ Different to `UIWebView`, as the HTML homepage referenced an `absolute path` at 
 https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700
 ```
 Hence, `https://www.httpbin.org/` looked prettier in `UIWebView`.
+
+
+
+### References
+##### Unit Test setup
+// weird trick: https://www.natashatherobot.com/ios-testing-view-controllers-swift/
+// https://www.vadimbulavin.com/unit-testing-async-code-in-swift/
+// https://stackoverflow.com/questions/52172971/xctkvoexpectation-usage-example-in-objective-c
