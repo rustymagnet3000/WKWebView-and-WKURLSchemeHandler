@@ -20,4 +20,4 @@ final class YDWKschemeVC: YDWKVanillaVC {
         webView.uiDelegate = self
         webView.navigationDelegate = self
     }
-}
+} 

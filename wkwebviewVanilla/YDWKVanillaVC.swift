@@ -66,10 +66,21 @@ class YDWKVanillaVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
     override func viewDidLoad() {
         print("[*]\tviewDidLoad...")
         super.viewDidLoad()
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
+        webView.scrollView.addSubview(refreshControl)
+        webView.scrollView.bounces = true
+        
         let myRequest = URLRequest(url: resource)
         self.webView.load(myRequest)
     }
 
+    @objc func refreshWebView(_ sender: UIRefreshControl){
+        webView.reloadFromOrigin()
+        sender.endRefreshing()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("[*]\tviewDidAppear...")
